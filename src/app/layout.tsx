@@ -1,3 +1,5 @@
+import styles from './components/Header.module.css'
+
 export default function RootLayout({
     children,
 }: {
@@ -5,7 +7,15 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <div className={styles.header}>
+                    <p>Header</p>
+                </div>
+                {children}
+                <div className={styles.footer}>
+                    <p>Footer</p>
+                </div>
+            </body>
         </html>
     )
 }
